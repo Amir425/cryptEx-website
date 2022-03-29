@@ -29,8 +29,8 @@ const ContractForm1 = (props) => {
     const [selectedCity1, setSelectedCity1] = useState(null);
     const [open, setOpen] = React.useState(false);
     const handleOpen = (e) => {
-       e.preventDefault();
-       setOpen(true);
+        e.preventDefault();
+        setOpen(true);
 
     }
     const handleClose = () => setOpen(false);
@@ -53,7 +53,7 @@ const ContractForm1 = (props) => {
         setSelectedCity1(e.value);
     }
 
-    const connectWallet = (e) =>{
+    const connectWallet = (e) => {
         e.preventDefault();
         setOpen(true);
     }
@@ -137,41 +137,41 @@ const ContractForm1 = (props) => {
 
                                 </div>
                                 <div class="col-md-12 col-xl-12 col-sm-12 col-lg-12 col-xxl-12 mt-5">
-                                    <button class="btn btn-wallet1 my-2 my-sm-0" type="submit" onClick={(e)=>connectWallet(e)}>Connect Wallet</button>
+                                    <button class="btn btn-wallet1 my-2 my-sm-0" type="submit" onClick={(e) => connectWallet(e)}>Connect Wallet</button>
                                 </div>
 
                             </div>
                         </div>
 
                         <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Box sx={style}>
-                    <div style={{float: "right"}}>
-                        <i className="pi pi-times RA-13-icon-cross" onClick={()=>handleClose()}></i>
-                    </div>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        <p className="text-center">Connect to a wallet</p>
-                    </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        <div>
-                            <button className="metabutton">   <img src={metamasks} alt="bscCryptex" width="10%" /> MetaMask</button>
-                        </div>
-                        <div className='mt-4'>
-                            <button className="metabutton">   <img src={wallet} width="1)0%" alt="bscCryptex" />WalletConnect</button>
-                        </div>
-                    </Typography>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        <p className="text-center mt-5">New to Ethereum?</p>
-                    </Typography>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        <p className="text-center1">Learn more about wallets</p>
-                    </Typography>
-                </Box>
-            </Modal>
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box sx={style}>
+                                <div style={{ float: "right" }}>
+                                    <i className="pi pi-times RA-13-icon-cross" onClick={() => handleClose()}></i>
+                                </div>
+                                <Typography id="modal-modal-title" variant="h6" component="h2">
+                                    <p className="text-center">Connect to a wallet</p>
+                                </Typography>
+                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                    <div>
+                                        <button className="metabutton">   <img src={metamasks} alt="bscCryptex" width="10%" /> MetaMask</button>
+                                    </div>
+                                    <div className='mt-4'>
+                                        <button className="metabutton">   <img src={wallet} width="1)0%" alt="bscCryptex" />WalletConnect</button>
+                                    </div>
+                                </Typography>
+                                <Typography id="modal-modal-title" variant="h6" component="h2">
+                                    <p className="text-center mt-5">New to Ethereum?</p>
+                                </Typography>
+                                <Typography id="modal-modal-title" variant="h6" component="h2">
+                                    <p className="text-center1">Learn more about wallets</p>
+                                </Typography>
+                            </Box>
+                        </Modal>
 
 
                     </div>
